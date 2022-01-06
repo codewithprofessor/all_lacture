@@ -3,6 +3,7 @@ using namespace std;
 
 int main()
 {
+//     code by ali
     int a[2][2];
     cout<<"Enter the value of A\n";
     for(int i=0;i<2;i++)
