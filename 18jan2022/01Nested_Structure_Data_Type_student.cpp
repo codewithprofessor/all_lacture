@@ -1,0 +1,58 @@
+#include<iostream>
+#include<string>
+#include<iomanip>
+using namespace std;
+struct adres
+{
+    string hm;           //home name
+    int stn;            //street number
+    string cty;         //city name
+};
+struct student
+{
+    int rl;                 //roll number
+    char nm[30];            //Name
+    int mrk[5];             //Marks
+    adres adr;              //variable for 1st structure
+};
+
+
+
+int main()
+{
+    // code by ali
+    int sum=0;
+    student s[2];
+    for(int i=0;i<1;i++)
+    {
+        cout<<"Enter the Roll Number  :";
+        cin>>s[i].rl;
+        cout<<"Enter the Name  :";
+        cin.ignore();
+        cin.getline(s[i].nm,30);
+        for(int j=0;j<5;j++)         //for 5 subjects
+        {
+            cout<<"Enter the Number of Subject  :";
+            cin>>s[i].mrk[j];
+            sum+=s[i].mrk[j];
+        }
+    cout<<"Enter the Adress :";
+    cin.ignore();
+    getline(cin,s[i].adr.hm);
+    cout<<"Enter the Street No :";
+    cin>>s[i].adr.stn;
+    cout<<"Enter the City :";
+    cin.ignore();
+    getline(cin,s[i].adr.cty);
+    }
+    cout<<setw(4)<<"ID"<<setw(20)<<"Name"<<setw(5)<<"No"<<setw(50)<<"Adress"<<endl;
+    for(int i=0;i<1;i++)
+    {
+        cout<<setw(4)<<s[i].rl<<setw(20)<<s[i].nm<<setw(5)<<sum<<setw(30)<<s[i].adr.hm<<" Street "<<s[i].adr.stn<<" "<<s[i].adr.cty<<endl;
+        //  iss output koo main ny city k name or house of different krny k lia space ko use kia hy
+        
+    }
+
+    
+    return 0;
+}
