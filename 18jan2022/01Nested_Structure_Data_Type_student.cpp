@@ -45,7 +45,7 @@ int main()
     cin.ignore();
     getline(cin,s[i].adr.cty);
     }
-    cout<<setw(4)<<"ID"<<setw(20)<<"Name"<<setw(5)<<"No"<<setw(50)<<"Adress"<<endl;
+    cout<<setw(4)<<"ID"<<setw(20)<<"Name"<<setw(5)<<"No"<<setw(30)<<"Adress"<<endl;
     for(int i=0;i<1;i++)
     {
         cout<<setw(4)<<s[i].rl<<setw(20)<<s[i].nm<<setw(5)<<sum<<setw(30)<<s[i].adr.hm<<" Street "<<s[i].adr.stn<<" "<<s[i].adr.cty<<endl;
